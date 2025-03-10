@@ -80,3 +80,35 @@ ul{
     list-style-type: square;
     padding: 0%;
 }
+.qr-code {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 2px solid #3498db; /* Blue border matching your header */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.qr-code img {
+    max-width: 150px; /* Adjustable size */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.qr-code img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.qr-code p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .qr-code img {
+        max-width: 120px;
+    }
+}
