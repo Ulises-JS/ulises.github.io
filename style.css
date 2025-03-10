@@ -1,13 +1,13 @@
 /* Reset global styles to avoid unwanted padding/margins */
 * {
     margin: 0;
-    padding: 0; /* Remove universal padding */
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     background-color: rgb(162, 178, 178);
-    font-family: Arial, sans-serif; /* Add a default font for consistency */
+    font-family: Arial, sans-serif;
 }
 
 /* Navigation Bar */
@@ -45,17 +45,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2%; /* Add padding here instead of universally */
+    padding: 2%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Headings and Paragraphs */
 h1 {
     color: rgb(0, 0, 0);
-    font-size: 2em; /* Responsive base size */
+    font-size: 2em;
+}
+
+.header {
+    font-size: larger;
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    margin: 20px 0 10px;
 }
 
 .par1 {
     font-style: italic;
+    font-size: 20px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .par2 {
@@ -66,10 +84,9 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     font-weight: bold;
-}
-
-.header {
-    font-size: larger;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* Images */
@@ -78,8 +95,13 @@ img {
     border-radius: 4px;
     padding: 1px;
     width: 25%;
-    max-width: 100%; /* Prevent overflow on mobile */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 280px;
+    height: auto;
+}
+
+.intro img {
+    max-width: 280px; /* Matches your original inline width */
+    height: auto;
 }
 
 /* Tables */
@@ -88,7 +110,7 @@ table {
     border-radius: 4px;
     padding: 5px;
     width: 25%;
-    max-width: 100%; /* Prevent overflow on mobile */
+    max-width: 100%;
 }
 
 td {
@@ -100,7 +122,7 @@ td {
 /* Lists */
 ul {
     list-style-type: square;
-    padding-left: 20px; /* Adjust padding for lists */
+    padding-left: 20px;
 }
 
 /* QR Code */
@@ -134,40 +156,58 @@ ul {
 @media (max-width: 768px) {
     /* Navigation Bar */
     .nav-bar ul li {
-        float: none; /* Stack nav items vertically on mobile */
+        float: none;
         text-align: center;
     }
 
     .nav-bar ul li a {
-        padding: 10px; /* Reduce padding for mobile */
+        padding: 10px;
     }
 
     /* Intro Section */
     .intro {
-        flex-direction: column; /* Stack items vertically on mobile */
+        flex-direction: column;
         padding: 5%;
+        overflow: visible;
     }
 
     /* Headings and Text */
     h1 {
-        font-size: 1.5em; /* Smaller heading on mobile */
+        font-size: 1.5em;
     }
 
-    .header, .par3 {
-        font-size: medium; /* Adjust font size for mobile */
+    .header {
+        font-size: medium;
+    }
+
+    .par1 {
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .par3 {
+        font-size: 1em;
+        width: 90%;
+        margin: 0 auto;
     }
 
     /* Images */
     img {
-        width: 80%; /* Larger relative width on mobile */
+        width: 80%;
         max-width: 100%;
-        margin: 0 auto; /* Center images */
-        display: block; /* Ensure proper centering */
+        margin: 10px auto;
+        display: block;
+    }
+
+    .intro img {
+        width: 80%;
+        max-width: 100%;
     }
 
     /* Tables */
     table {
-        width: 90%; /* Larger relative width on mobile */
+        width: 90%;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -181,23 +221,36 @@ ul {
         max-width: 120px;
     }
 
-    /* General Adjustments */
     ul {
-        padding-left: 15px; /* Adjust list padding for mobile */
+        padding-left: 15px;
     }
 }
 
-/* Extra Small Screens (e.g., very small phones) */
+/* Extra Small Screens */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.2em;
     }
 
-    .header, .par3 {
+    .header {
         font-size: small;
     }
 
+    .par1 {
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .par3 {
+        font-size: 0.9em;
+        width: 95%;
+    }
+
     img {
+        width: 90%;
+    }
+
+    .intro img {
         width: 90%;
     }
 
