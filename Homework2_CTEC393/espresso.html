@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylemenu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espresso Menu</title>
+  
+</head>
+<body>
+<h4>Choose from the Dropdown Menu Options</h4>
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="menu.html">Home</a>  
+    <a href="espresso.html">Espresso</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="others.html">Others</a>
+  </div>
+</div>
+
+<div id="espresso" class="menu-section">
+  <h1>Espresso Menu</h1>
+  
+  
+<form id="espresoForm" method="post" action="#">
+<fieldset>
+<legend>Choose an Item/s</legend>
+  <label for="americano">
+    <input type="checkbox" id="americano" name="americano" value="3.99">
+    Americano $3.99
+  </label>
+  <input type="number" id="item1Quantity" name="item1Quantity" min="0">
+  <br>
+
+  <label for="macchiato">
+    <input type="checkbox" id="macchiato" name="macchiato" value="2.78">
+    Macchiato $2.78
+  </label>
+  <input type="number" id="item2Quantity" name="item2Quantity" min="0">
+  <br>
+
+<label for="cappuccino">
+<input type="checkbox" id="cappuccino" name="cappuccino" value="1.99">
+Cappuccino $1.99
+</label>
+<input type="number" id="item3Quantity" name="item3Quantity" min="0">
+<br>
+
+  <button type="submit">Select Items</button>
+</form>
+</div>
+
+<!--    <div class="selected-items">
+        <h2>Selected Items</h2>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST["items"]) && isset($_POST["quantities"])) {
+                $items = $_POST["items"];
+                $quantities = $_POST["quantities"];
+                for ($i = 0; $i < count($items); $i++) {
+                    if ($quantities[$i] > 0) {
+                        echo "<p>" . $items[$i] . " - Quantity: " . $quantities[$i] . "</p>";
+                    }
+                }
+            }
+        }
+        ?>
+   </div>
+-->
+<label>Total Cost: $<input type="text" id="totalCost" readonly></label><br>
+<button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+<button type="button" value='pay' onclick=location.href='pay.html'>Pay</button>
+
+<div>
+<img src="americano.png" alt="americano">
+<img src="macchiato.jpg" alt="macchiato">
+<img src="cappuccino.png" alt="cappuccino">
+
+</div>
+</body>
+</html>
