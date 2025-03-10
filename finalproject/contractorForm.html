@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spectrum Gardening Services Contractor Form</title>   
+        <link rel="stylesheet" href="landscape.css">
+    </head>
+    <body class="back">
+        <!-- navigation bar -->
+        <ul class="nav-bar">
+            <li><a href="landscape.html">Home</a></li>
+            <li><a href="contractorForm.html">Contractor Form</a></li>
+            <li><a href="contractorInfo.php">Contractor Information</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+        <div class="container">
+            <!-- page title -->
+            <h1>Spectrum Gardening Services.</h1>
+            <!-- form code starts here -->
+            <form action="formProcess.php" method="post">
+                <div>
+                    <br>
+                    <br>
+                    <label class="formTitle"><h2>New Service Form:</h2></label><hr/><br/>
+                </div>
+                <!-- php code starts here -->
+                <?php
+                // Establish connection to database
+                $servername = "sql305.infinityfree.com";
+                $username = "if0_36254352";
+                $password = "mWriN9jg6S";
+                $dbname = "if0_36254352_final_project_ctec393";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("connection failed: " . $conn->connect_error);
+                }
+
+                // Query last JobID, to be populated on the form, so the user doesnt have to keep track of the last JobID used.
+                $sql_max_id = "SELECT MAX(JobID) AS max_id FROM Jobs";
+                $result = $conn->query($sql_max_id);
+                $row = $result->fetch_assoc();
+                $max_id = $row['max_id'];
+
+                // Query contractors
+                $sql_contractors = "SELECT ContractorID FROM Contractor";
+                $contractors_result = $conn->query($sql_contractors);
+
+                // Close connection
+                $conn->close();
+                ?>
+                <!-- php code ends here -->
+
+                <!-- first table New Service Form -->
+                Job ID: <input type="text" name="JobID" class="box1" value="<?php echo $max_id; ?>" readonly><br>
+                Client Address: <input type="text" name="ClientAddress" class="box"><br>
+                Client Name: <input type="text" name="ClientName" class="box"><br>
+                Client Phone Number: <input type="tel" name="ClientPhoneNumber" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+                <label for="contractorID">Contractor ID</label>
+                <select name="ContractorID" class="box">
+
+                    <!-- php code that retrieves ContractorID stored on the database -->
+                    <?php
+                    if ($contractors_result->num_rows > 0) {
+                        while ($contractor = $contractors_result->fetch_assoc()) {
+                            echo "<option value='" . $contractor['ContractorID'] . "'>" . $contractor['ContractorID'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+                <input type="submit">
+
+            </form>
+        </div>
+        
+        <div class="container">
+        <div>                
+            <br>
+            <br>
+            <!-- second form, allows to Add a New Contractor -->
+            <label class="formTitle"><h2>Add New Contractor:</h2></label>
+            <hr/><br/>
+        </div>
+
+        <form action="newContractorForm.php" method="post">
+            <label for="ContractorID">Contractor ID:</label><br>
+            <input type="text" id="ContractorID" name="ContractorID" required><br>
+
+            <label for="ContractorName">Contractor Name:</label><br>
+            <input type="text" id="ContractorName" name="ContractorName" required><br>
+
+            <label for="NumberOfEmployees">Number of Employees:</label><br>
+            <input type="text" id="NumberOfEmployees" name="NumberOfEmployees" required><br>
+
+            <label for="ContractorPhoneNumber">Contractor Phone Number:</label><br>
+            <input type="tel" id="ContractorPhoneNumber" name="ContractorPhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            <input type="submit">
+        </form>
+        </div>
+
+    </body>
+</html>
