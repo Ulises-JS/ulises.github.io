@@ -82,4 +82,7 @@ function renderTasks() {
 }
 
 // Render tasks when the page loads
-window.onload = renderTasks;
+window.onload = function() {
+    renderTasks(); // Render tasks on page load
+}
+
