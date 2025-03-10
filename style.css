@@ -1,17 +1,33 @@
+/* Reset global styles to avoid unwanted padding/margins */
+* {
+    margin: 0;
+    padding: 0; /* Remove universal padding */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(162, 178, 178);
+    font-family: Arial, sans-serif; /* Add a default font for consistency */
+}
+
+/* Navigation Bar */
 .nav-bar ul {
-    list-style-type: none;   
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #282828;
 }
+
 .nav-bar a.active {
-  color: #fff; 
-  background-color: #007bff;
+    color: #fff;
+    background-color: #007bff;
 }
+
 .nav-bar ul li {
-    float: left; 
+    float: left;
 }
+
 .nav-bar ul li a {
     display: block;
     color: white;
@@ -19,85 +35,93 @@
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .nav-bar ul li a:hover {
     background-color: #09ad09;
 }
-* {
-    margin: 0;
-    padding: 1%;
-    box-sizing: border-box;
-}
-body{
-   
-    background-color:rgb(162, 178, 178);
-}
-.intro{
+
+/* Intro Section */
+.intro {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2%; /* Add padding here instead of universally */
 }
-h1{
+
+/* Headings and Paragraphs */
+h1 {
     color: rgb(0, 0, 0);
+    font-size: 2em; /* Responsive base size */
 }
-.par1{
+
+.par1 {
     font-style: italic;
 }
-.par2{
+
+.par2 {
     font-style: oblique;
 }
-.par3{
+
+.par3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     font-weight: bold;
-
 }
 
-.header{
+.header {
     font-size: larger;
 }
 
-img{
+/* Images */
+img {
     border: 5px solid #000000;
     border-radius: 4px;
     padding: 1px;
     width: 25%;
+    max-width: 100%; /* Prevent overflow on mobile */
+    height: auto; /* Maintain aspect ratio */
 }
 
-table{
+/* Tables */
+table {
     border: 1px solid #1b1c21;
     border-radius: 4px;
     padding: 5px;
     width: 25%;
+    max-width: 100%; /* Prevent overflow on mobile */
 }
 
-td{
+td {
     border: 1px solid black;
     padding: 2px;
     border-radius: 3px;
 }
 
-ul{
+/* Lists */
+ul {
     list-style-type: square;
-    padding: 0%;
+    padding-left: 20px; /* Adjust padding for lists */
 }
+
+/* QR Code */
 .qr-code {
     text-align: center;
     margin-top: 1em;
     padding: 1em;
-    background-color: #f9f9f9; /* Light gray background */
-    border: 2px solid #3498db; /* Blue border matching your header */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f9f9f9;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .qr-code img {
-    max-width: 150px; /* Adjustable size */
+    max-width: 150px;
     height: auto;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease;
 }
 
 .qr-code img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
 }
 
 .qr-code p {
@@ -106,9 +130,82 @@ ul{
     margin-top: 0.5em;
 }
 
-/* Responsive adjustment */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Navigation Bar */
+    .nav-bar ul li {
+        float: none; /* Stack nav items vertically on mobile */
+        text-align: center;
+    }
+
+    .nav-bar ul li a {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    /* Intro Section */
+    .intro {
+        flex-direction: column; /* Stack items vertically on mobile */
+        padding: 5%;
+    }
+
+    /* Headings and Text */
+    h1 {
+        font-size: 1.5em; /* Smaller heading on mobile */
+    }
+
+    .header, .par3 {
+        font-size: medium; /* Adjust font size for mobile */
+    }
+
+    /* Images */
+    img {
+        width: 80%; /* Larger relative width on mobile */
+        max-width: 100%;
+        margin: 0 auto; /* Center images */
+        display: block; /* Ensure proper centering */
+    }
+
+    /* Tables */
+    table {
+        width: 90%; /* Larger relative width on mobile */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* QR Code */
+    .qr-code {
+        padding: 0.5em;
+    }
+
     .qr-code img {
         max-width: 120px;
+    }
+
+    /* General Adjustments */
+    ul {
+        padding-left: 15px; /* Adjust list padding for mobile */
+    }
+}
+
+/* Extra Small Screens (e.g., very small phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .header, .par3 {
+        font-size: small;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .qr-code img {
+        max-width: 100px;
     }
 }
