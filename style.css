@@ -287,37 +287,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column;
-        text-align: center;
-    }
-    .intro-image {
-        margin: 20px 0 0;
-        max-width: 100%;
-    }
-    .nav-bar ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-    .nav-bar ul li {
-        margin: 10px 0;
-    }
-    .completed-courses table,
-    .completed-courses th,
-    .completed-courses td {
-        display: block;
-        width: 100%;
-    }
-    .completed-courses th {
-        background-color: #333;
-        color: white;
-    }
-    .completed-courses tr {
-        margin-bottom: 15px;
-    }
-    /* Chatbot Styling */
+/* Chatbot Styling */
 .chatbot-container {
     position: fixed;
     bottom: 20px;
@@ -416,4 +386,35 @@ footer a:hover {
     cursor: pointer;
     z-index: 1000;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-image {
+        margin: 20px 0 0;
+        max-width: 100%;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .nav-bar ul li {
+        margin: 10px 0;
+    }
+    .completed-courses table,
+    .completed-courses th,
+    .completed-courses td {
+        display: block;
+        width: 100%;
+    }
+    .completed-courses th {
+        background-color: #333;
+        color: white;
+    }
+    .completed-courses tr {
+        margin-bottom: 15px;
+    }
 }
