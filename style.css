@@ -119,6 +119,14 @@ main {
 .par1 a:hover, .par3 a:hover {
     text-decoration: underline;
 }
+/* Passion Section */
+.passion-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
 
 /* Resume Section */
 #resume {
