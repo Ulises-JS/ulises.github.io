@@ -273,4 +273,47 @@ footer a:hover {
     .completed-courses tr {
         margin-bottom: 15px;
     }
+    /* Resume Section Styling */
+.resume-section {
+    margin-bottom: 20px; /* Space between subsections */
+}
+
+.resume-section h3 {
+    font-size: 20px; /* Slightly smaller than h2 for hierarchy */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resume-section h4 {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0 5px;
+}
+
+.resume-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.resume-section ul li {
+    margin-bottom: 8px;
+}
+
+/* QR Code Styling */
+.qr-section {
+    text-align: center; /* Center QR code */
+}
+
+.qr-code img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.qr-code p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
 }
