@@ -72,17 +72,15 @@ header p {
     font-size: 20px;
 }
 
-/* Main Section Styling */
-main {
-    padding: 20px;
-}
-
 /* About Me Section */
 .intro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .intro-text {
@@ -90,79 +88,41 @@ main {
     max-width: 600px;  /* Limit the text section width */
     font-size: 18px;
     line-height: 1.6;
+    color: #333;
 }
 
 .intro-image {
     flex: 1;
-    max-width: 350px;  /* Limit image width */
+    max-width: 300px;  /* Limit image width */
     margin-left: 20px;
 }
 
 .intro-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Resume Section */
-#resume {
+/* Career Goals Section */
+section.career-goals {
     margin-top: 40px;
-}
-
-.resume-section {
-    margin-bottom: 20px;
-}
-
-.resume-section h3 {
-    font-size: 22px;
-    color: #333;
-}
-
-.resume-section h4 {
-    font-size: 20px;
-    color: #555;
-}
-
-.resume-section p,
-.resume-section ul {
-    font-size: 18px;
-    color: #666;
-}
-
-.resume-section ul {
-    padding-left: 20px;
-}
-
-.resume-section ul li {
-    list-style-type: square;
-}
-
-/* Projects Section */
-.project {
-    background-color: #fff;
     padding: 20px;
-    margin: 10px 0;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.project h2 {
+section.career-goals h2 {
     font-size: 22px;
     color: #333;
 }
 
-.project p {
+section.career-goals ul {
     font-size: 18px;
-    color: #666;
+    color: #555;
 }
 
-.project a {
-    font-size: 18px;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
+section.career-goals ul li {
+    margin-bottom: 10px;
 }
 
 /* Footer Styling */
@@ -184,19 +144,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* General Image Styling */
-img {
-    max-width: 100%;   /* Ensure image scales with container width */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;    /* Remove any inline spacing */
-    margin: 0 auto;    /* Center the image */
-}
-
-/* Project Images */
-.project img {
-    max-width: 250px;  /* Limit image size within the project section */
-    height: auto;
-    margin: 20px 0;
 }
