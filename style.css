@@ -1,16 +1,20 @@
-/* General Styles */
+/* General Body and Layout Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #f4f4f4;
 }
 
-/* Navigation Bar */
+/* Navigation Bar Styling */
 .nav-bar {
     background-color: #333;
     color: white;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-bar ul {
@@ -24,6 +28,7 @@ body {
 
 .nav-bar ul li {
     margin-right: 20px;
+    position: relative;
 }
 
 .nav-bar ul li:last-child {
@@ -46,171 +51,152 @@ body {
 
 .nav-bar ul li a.active {
     background-color: #ff6f61;
-    color: white;
+    color: #fff;
+    font-weight: bold;
 }
 
-/* Header */
+/* Header Styling */
 header {
     background-color: #333;
     color: white;
-    text-align: center;
     padding: 30px 0;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 36px;
     margin: 0;
+    font-size: 36px;
 }
 
-/* Section Styling */
-section {
+header p {
+    font-size: 20px;
+}
+
+/* Main Section Styling */
+main {
     padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Intro Section */
+/* About Me Section */
 .intro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .intro-text {
     flex: 1;
-    padding-right: 20px;
-}
-
-.intro-text p {
+    max-width: 600px;  /* Limit the text section width */
     font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #555;
+    line-height: 1.6;
 }
 
 .intro-image {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 350px;  /* Limit image width */
+    margin-left: 20px;
 }
 
 .intro-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-/* Career Goals Section */
-.career-goals ul {
-    list-style-type: none;
-    padding-left: 20px;
+/* Resume Section */
+#resume {
+    margin-top: 40px;
 }
 
-.career-goals ul li {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.career-goals h2 {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
+.resume-section {
     margin-bottom: 20px;
 }
 
-/* Passion Section */
-.passion {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
+.resume-section h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.resume-section h4 {
+    font-size: 20px;
+    color: #555;
+}
+
+.resume-section p,
+.resume-section ul {
+    font-size: 18px;
+    color: #666;
+}
+
+.resume-section ul {
+    padding-left: 20px;
+}
+
+.resume-section ul li {
+    list-style-type: square;
+}
+
+/* Projects Section */
+.project {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.passion h2 {
-    font-size: 28px;
-    text-align: center;
+.project h2 {
+    font-size: 22px;
     color: #333;
 }
 
-.passion-text {
+.project p {
     font-size: 18px;
-    line-height: 1.8;
-    color: #555;
-    margin-top: 15px;
+    color: #666;
 }
 
-/* Project and Experience Sections */
-.project, .experience {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.project h2, .experience h2 {
-    font-size: 28px;
-    text-align: center;
-    color: #333;
-}
-
-.project-text, .experience-text {
+.project a {
     font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    margin-top: 15px;
+    color: #0066cc;
+    text-decoration: none;
 }
 
-/* Footer */
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
 }
 
 footer a {
-    color: #fff;
+    color: #0066cc;
     text-decoration: none;
-    font-size: 16px;
-    margin: 0 10px;
 }
 
 footer a:hover {
-    color: #ff6f61;
+    text-decoration: underline;
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column;
-    }
+/* General Image Styling */
+img {
+    max-width: 100%;   /* Ensure image scales with container width */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;    /* Remove any inline spacing */
+    margin: 0 auto;    /* Center the image */
+}
 
-    .intro-text {
-        padding-right: 0;
-    }
-
-    .nav-bar ul {
-        flex-direction: column;
-    }
-
-    .nav-bar ul li {
-        margin-bottom: 10px;
-    }
-
-    .intro-image {
-        margin-top: 20px;
-    }
+/* Project Images */
+.project img {
+    max-width: 250px;  /* Limit image size within the project section */
+    height: auto;
+    margin: 20px 0;
 }
