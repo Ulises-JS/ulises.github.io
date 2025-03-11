@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Global Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Specific Image Styling for QR Code (if needed) */
+.qr-code img {
+    max-width: 150px; /* Set a specific maximum width for the QR code */
+    height: auto;
+    margin-top: 20px;
+} 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
