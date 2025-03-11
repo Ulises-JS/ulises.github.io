@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
-    line-height: 1.6; /* Added for better readability */
+    line-height: 1.6; /* Better readability */
 }
 
 /* Container for Page Content */
@@ -78,7 +78,7 @@ header h1 {
 
 header p {
     font-size: 20px;
-    margin: 10px 0 0; /* Added for spacing */
+    margin: 10px 0 0; /* Spacing for subtitle */
 }
 
 /* Generic Section Styling (for all pages) */
@@ -87,7 +87,7 @@ section {
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Added for consistency */
+    border-radius: 8px;
 }
 
 section h2 {
@@ -96,7 +96,8 @@ section h2 {
     margin-bottom: 15px; /* Uniform heading spacing */
 }
 
-section p, section ul {
+section p,
+section ul {
     font-size: 18px;
     color: #555;
 }
@@ -106,7 +107,7 @@ section p, section ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0; /* Reduced to fit section pattern */
+    margin: 20px 0; /* Adjusted to fit section pattern */
 }
 
 .intro-text {
@@ -114,6 +115,15 @@ section p, section ul {
     max-width: 600px;
     line-height: 1.6;
     color: #333;
+}
+
+.intro-text a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.intro-text a:hover {
+    text-decoration: underline;
 }
 
 .intro-image {
@@ -133,42 +143,82 @@ section.career-goals ul li {
     margin-bottom: 10px;
 }
 
+/* Technical Skills Section (Experience Page) */
+section.technical-skills ul li {
+    margin-bottom: 10px;
+}
+
+/* Web Experience Section (Experience Page) */
+section.web-experience p {
+    margin-bottom: 15px;
+}
+
+/* Completed Courses Section (Experience Page) */
+.completed-courses table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.completed-courses th,
+.completed-courses td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.completed-courses th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.completed-courses tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.completed-courses tr:hover {
+    background-color: #f1f1f1;
+}
+
 /* Projects Section */
 .projects-header {
     text-align: center;
-    font-size: 36px; /* Matches header h1 for consistency */
+    font-size: 36px; /* Matches header h1 */
     margin: 20px 0;
-    color: #333; /* Aligns with section h2 */
+    color: #333;
 }
 
 .project {
-    background-color: white; /* Changed to match other sections */
+    background-color: white;
     padding: 20px;
-    margin: 20px 0; /* Adjusted for flow */
+    margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Matches other sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project h2 {
-    font-size: 22px; /* Matches section h2 */
+    font-size: 22px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .project p {
-    font-size: 18px; /* Matches body text */
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
 .project-link {
     text-decoration: none;
-    font-size: 18px; /* Matches body text */
-    color: #ff6f61; /* Uses accent color */
+    font-size: 18px;
+    color: #ff6f61;
     transition: color 0.3s;
 }
 
 .project-link:hover {
-    color: #e65a50; /* Slightly darker shade for hover */
+    color: #e65a50; /* Slightly darker coral */
 }
 
 /* Footer Styling */
@@ -181,11 +231,11 @@ footer {
 
 footer p {
     font-size: 16px;
-    margin: 0; /* Cleaner look */
+    margin: 0;
 }
 
 footer a {
-    color: #ff6f61; /* Updated to match accent color */
+    color: #ff6f61;
     text-decoration: none;
 }
 
@@ -209,5 +259,18 @@ footer a:hover {
     }
     .nav-bar ul li {
         margin: 10px 0;
+    }
+    .completed-courses table,
+    .completed-courses th,
+    .completed-courses td {
+        display: block;
+        width: 100%;
+    }
+    .completed-courses th {
+        background-color: #333;
+        color: white;
+    }
+    .completed-courses tr {
+        margin-bottom: 15px;
     }
 }
