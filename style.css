@@ -1,144 +1,205 @@
-/* General Reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #0056b3;
 }
 
 /* Navigation Bar */
 .nav-bar {
     background-color: #333;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.nav-bar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-bar ul li {
-    display: inline;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.nav-bar ul li a:hover,
-.nav-bar ul li a.active {
-    background-color: #ff4d4d;
-    border-radius: 5px;
-}
-
-/* Page Structure */
-body {
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Headings */
-h2 {
-    text-align: center;
-    font-size: 26px;
-    color: #222;
-    margin-top: 20px;
-}
-
-/* Lists (Technical Skills) */
-ul {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    list-style-type: square;
-}
-
-ul li {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Paragraph Styling */
-.par2 {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Table Styling */
-table {
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
     overflow: hidden;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
 }
 
-th {
-    background-color: #ff4d4d;
+.nav-bar ul li {
+    display: inline-block;
+}
+
+.nav-bar ul li a {
+    display: block;
+    padding: 14px 20px;
     color: white;
+    font-size: 18px;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.nav-bar ul li a:hover, .nav-bar ul li a.active {
+    background-color: #575757;
 }
 
-tr:hover {
-    background-color: #ddd;
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#resume {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.resume-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.resume-section ul li {
+    margin-bottom: 10px;
+}
+
+.resume-section div h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.resume-section div p {
+    margin: 5px 0;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-top: 40px;
+}
+
+.projects-section h4 {
+    font-size: 1.5rem;
+}
+
+.projects-section a {
+    color: #0056b3;
+}
+
+.projects-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ddd;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.qr-code img {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.qr-code p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Form Elements */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #575757;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    ul, .par2, table {
-        width: 95%;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    ul li {
-        font-size: 16px;
-    }
-
-    /* Navigation Bar */
-    .nav-bar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .nav-bar ul li {
         display: block;
+        text-align: center;
+        padding: 10px;
     }
 
-    /* Image Responsiveness */
-    .intro-img {
-        max-width: 100%;
-        height: auto;
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .resume-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .resume-section ul {
+        margin-left: 20px;
     }
 }
+
