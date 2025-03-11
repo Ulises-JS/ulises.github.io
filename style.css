@@ -1,99 +1,96 @@
-/* Global Styles */
-* {
+/* General Body and Layout Styling */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Global Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Specific Image Styling for QR Code (if needed) */
-.qr-code img {
-    max-width: 150px; /* Set a specific maximum width for the QR code */
-    height: auto;
-    margin-top: 20px;
-} 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-h1, h2, h3, h4 {
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Navigation Bar */
+/* Navigation Bar Styling */
 .nav-bar {
     background-color: #333;
-    overflow: hidden;
+    color: white;
+    padding: 10px 0;
 }
 
 .nav-bar ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .nav-bar ul li {
-    display: inline-block;
+    display: inline;
+    margin-right: 20px;
 }
 
 .nav-bar ul li a {
-    display: block;
-    padding: 14px 20px;
     color: white;
+    text-decoration: none;
     font-size: 18px;
 }
 
-.nav-bar ul li a:hover, .nav-bar ul li a.active {
-    background-color: #575757;
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+    text-decoration: underline;
 }
 
-/* Header */
+/* Header Styling */
 header {
     background-color: #333;
     color: white;
+    padding: 30px 0;
     text-align: center;
-    padding: 50px 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 36px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
-/* Main Content */
+/* Main Section Styling */
 main {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
+/* About Me Section */
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.intro img {
+    max-width: 300px;  /* Limit image size in the intro section */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto;
+}
+
+.par1 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.par3 {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Resume Section */
 #resume {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
 }
 
 .resume-section {
@@ -101,119 +98,104 @@ main {
 }
 
 .resume-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.resume-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.resume-section ul li {
-    margin-bottom: 10px;
-}
-
-.resume-section div h4 {
-    font-size: 1.5rem;
+    font-size: 22px;
     color: #333;
 }
 
-.resume-section div p {
-    margin: 5px 0;
+.resume-section h4 {
+    font-size: 20px;
+    color: #555;
+}
+
+.resume-section p,
+.resume-section ul {
+    font-size: 18px;
+    color: #666;
+}
+
+.resume-section ul {
+    padding-left: 20px;
+}
+
+.resume-section ul li {
+    list-style-type: square;
 }
 
 /* Projects Section */
-.projects-section {
-    margin-top: 40px;
+.project {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.projects-section h4 {
-    font-size: 1.5rem;
+.project h2 {
+    font-size: 22px;
+    color: #333;
 }
 
-.projects-section a {
-    color: #0056b3;
+.project p {
+    font-size: 18px;
+    color: #666;
 }
 
-.projects-section a:hover {
+.project a {
+    font-size: 18px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.project a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 footer p {
-    margin: 10px 0;
+    font-size: 16px;
 }
 
 footer a {
-    color: #ddd;
-    margin: 0 10px;
+    color: #0066cc;
+    text-decoration: none;
 }
 
 footer a:hover {
-    color: #fff;
+    text-decoration: underline;
 }
 
 .qr-code img {
-    max-width: 200px;
-    margin-top: 20px;
+    max-width: 120px;  /* Smaller width for QR code */
+    height: auto;      /* Maintain aspect ratio */
+    margin-top: 20px;  /* Add some spacing if necessary */
 }
 
 .qr-code p {
     margin-top: 10px;
-    font-size: 1rem;
 }
 
-/* Form Elements */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+/* Project Images */
+.project img {
+    max-width: 250px;  /* Limit image size within the project section */
+    height: auto;
+    margin: 20px 0;
 }
 
-input[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 15px;
+/* Short-Term Career Goals */
+.par3 {
+    margin-bottom: 20px;
 }
 
-input[type="submit"]:hover {
-    background-color: #575757;
+/* General Image Styling */
+img {
+    max-width: 100%;   /* Ensure image scales with container width */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;    /* Remove any inline spacing */
+    margin: 0 auto;    /* Center the image */
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-bar ul li {
-        display: block;
-        text-align: center;
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .resume-section h3 {
-        font-size: 1.5rem;
-    }
-
-    .resume-section ul {
-        margin-left: 20px;
-    }
-}
-
