@@ -5,6 +5,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
+    line-height: 1.6; /* Added for better readability */
+}
+
+/* Container for Page Content */
+.page-container {
+    max-width: 1200px; /* Consistent width for all pages */
+    margin: 0 auto; /* Center content */
+    padding: 20px; /* Uniform padding */
 }
 
 /* Navigation Bar Styling */
@@ -70,6 +78,27 @@ header h1 {
 
 header p {
     font-size: 20px;
+    margin: 10px 0 0; /* Added for spacing */
+}
+
+/* Generic Section Styling (for all pages) */
+section {
+    margin: 40px 0; /* Consistent section spacing */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Added for consistency */
+}
+
+section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px; /* Uniform heading spacing */
+}
+
+section p, section ul {
+    font-size: 18px;
+    color: #555;
 }
 
 /* About Me Section */
@@ -77,23 +106,19 @@ header p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Reduced to fit section pattern */
 }
 
 .intro-text {
     flex: 1;
-    max-width: 600px;  /* Limit the text section width */
-    font-size: 18px;
+    max-width: 600px;
     line-height: 1.6;
     color: #333;
 }
 
 .intro-image {
     flex: 1;
-    max-width: 300px;  /* Limit image width */
+    max-width: 300px;
     margin-left: 20px;
 }
 
@@ -104,25 +129,46 @@ header p {
 }
 
 /* Career Goals Section */
-section.career-goals {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section.career-goals h2 {
-    font-size: 22px;
-    color: #333;
-}
-
-section.career-goals ul {
-    font-size: 18px;
-    color: #555;
-}
-
 section.career-goals ul li {
     margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects-header {
+    text-align: center;
+    font-size: 36px; /* Matches header h1 for consistency */
+    margin: 20px 0;
+    color: #333; /* Aligns with section h2 */
+}
+
+.project {
+    background-color: white; /* Changed to match other sections */
+    padding: 20px;
+    margin: 20px 0; /* Adjusted for flow */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Matches other sections */
+}
+
+.project h2 {
+    font-size: 22px; /* Matches section h2 */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 18px; /* Matches body text */
+    margin-bottom: 15px;
+}
+
+.project-link {
+    text-decoration: none;
+    font-size: 18px; /* Matches body text */
+    color: #ff6f61; /* Uses accent color */
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #e65a50; /* Slightly darker shade for hover */
 }
 
 /* Footer Styling */
@@ -135,48 +181,33 @@ footer {
 
 footer p {
     font-size: 16px;
+    margin: 0; /* Cleaner look */
 }
 
 footer a {
-    color: #0066cc;
+    color: #ff6f61; /* Updated to match accent color */
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-/* CSS for Projects */
-.projects-header {
-    text-align: center;
-    font-size: 2em;
-    margin: 20px;
-}
 
-.project {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-.project-link {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #4CAF50;
-    transition: color 0.3s;
-}
-
-.project-link:hover {
-    color: #45a049;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-image {
+        margin: 20px 0 0;
+        max-width: 100%;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .nav-bar ul li {
+        margin: 10px 0;
+    }
 }
