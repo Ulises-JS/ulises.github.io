@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         console.log("Minimized bubble not found");
       }
-    }, 100); // Small delay to ensure widget renders
+    }, 500); // Small delay to ensure widget renders
   });
 
   // Handle close button
