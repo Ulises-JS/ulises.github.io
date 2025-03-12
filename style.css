@@ -286,7 +286,34 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+/* Chatbot personalization */
+/* Override Dialogflow Messenger styles */
+df-messenger {
+  --df-messenger-bot-message: #f4f4f4; /* Light gray bot message background */
+  --df-messenger-user-message: #ff6f61; /* Coral user message background */
+  --df-messenger-font-color: #333; /* Dark text color */
+  --df-messenger-chat-background-color: #fff; /* White chat window */
+  --df-messenger-button-titlebar-color: #333; /* Dark header */
+  --df-messenger-button-titlebar-font-color: #fff; /* White header text */
+  --df-messenger-send-icon: #ff6f61; /* Coral send button */
+}
 
+/* Position and shadow */
+df-messenger {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Chat window size */
+df-messenger-chat {
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .intro {
