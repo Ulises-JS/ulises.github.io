@@ -137,6 +137,26 @@ section ul {
     height: auto;
     border-radius: 8px;
 }
+/*resume*/
+.resume-download {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}
 
 /* Career Goals Section */
 section.career-goals ul li {
