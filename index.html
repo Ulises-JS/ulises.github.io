@@ -66,18 +66,13 @@
         <p>© 2025 Ulises Servellon | <a href="mailto:juarezservellu0512@students.bowiestate.edu">Contact Me</a></p>
     </footer>
 
-    <!-- Chatbot Container -->
-<div class="chatbot-container">
-    <div class="chatbot-header">
-        <h3>Chat with UlisesBot</h3>
-        <button class="chatbot-toggle">X</button>
-    </div>
-    <div class="chatbot-messages" id="chatbotMessages"></div>
-    <div class="chatbot-input">
-        <input type="text" id="chatbotInput" placeholder="Ask me anything...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
-<script src="chatbot.js"></script>
+    <!-- Dialogflow -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="UlisesBot"
+  agent-id="03d6e81b-b1b0-45ce-a6bc-14ead5a4d20e"
+  language-code="en"
+></df-messenger>
 </body>
 </html>
