@@ -343,7 +343,9 @@ df-messenger-chat {
         padding: 8px 12px;
     }
 }
-
+df-messenger:not([open]) {
+    display: none !important;
+}
 @media (max-width: 768px) {
     df-messenger-chat {
         width: 250px;
