@@ -12,11 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Opening chatbot");
     dfMessenger.style.display = "block";
     openButton.style.display = "none";
-    // Use Dialogflow's API to open the chat
-    const chatApp = dfMessenger.shadowRoot.querySelector("df-messenger-chat");
-    if (chatApp && chatApp.show) {
-      chatApp.show();
-    }
+    // Wait for the widget to render, then simulate a click on the minimized bubble
+    setTimeout(() => {
+      const minimizedBubble = dfMessenger.shadowRoot.querySelector(".df-messenger-minimized");
+      if (minimizedBubble) {
+        console.log("Simulating click on minimized bubble");
+        minimizedBubble.click(); // Simulate click to open the full chat
+      } else {
+        console.log("Minimized bubble not found");
+      }
+    }, 100); // Small delay to ensure widget renders
   });
 
   // Handle close button
